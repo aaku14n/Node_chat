@@ -2,7 +2,7 @@ var express = require('express');
 var dl  = require('delivery');
 var fs  = require('fs');
 var path = require('path');
-var serveIndex = require('serve-index');
+// var serveIndex = require('serve-index');
 var emoji = require('node-emoji');
 var format = function (code, name) {
   return '<img alt="' + code + '" src="/public/img/apple40/' + name + '.png" />';
@@ -13,7 +13,7 @@ datainfo="";
 	
 	//app.use('/rootdata',express.static(__dirname+"/images"));
 	app.use('/public', express.static(path.join(__dirname + '/public')));
-	app.use('/public', serveIndex(path.join(__dirname, '/public')));
+	// app.use('/public', serveIndex(path.join(__dirname, '/public')));
 	// app.use('/public', express.static(__dirname + "/public"));
 	//app.use('/emojidata',express.static(__dirname+"/jqueryemoji-master/img/emojione/"));
 	
